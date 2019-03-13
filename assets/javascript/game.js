@@ -15,8 +15,6 @@ function reset() {
     GuessesLeft = 10;
     guesses = [];
     compLetters;
-    losses + 1;
-    // document.getElementById("guesses-so-far").textContent;
 }; 
 
 // Letters the user can enter
