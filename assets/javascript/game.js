@@ -15,6 +15,7 @@ function reset() {
     GuessesLeft = 10;
     guesses = [];
     compLetters;
+    // document.getElementById("guesses-so-far").textContent;
 }; 
 
 // Letters the user can enter
@@ -25,7 +26,7 @@ document.onkeyup = function (event) {
     var userGuess = event.key;
 
     console.log(userGuess);
-
+    
     if (letters.indexOf(userGuess) > -1) {
 
         // If the userGuess matches the Computer: +1 win, Still 10 guesses
@@ -46,8 +47,8 @@ document.onkeyup = function (event) {
         //Once the # of guesses reaches 0, restart the game
         else if (GuessesLeft === 0) {
             losses++;
-            document.getElementById("guesses-left").textContent = GuessesLeft;
-            document.getElementById("guesses-so-far").textContent = guesses;
+            guesses.push(losses);
+            document.getElementById("losses2").textContent = losses;
             reset();
         }
 
