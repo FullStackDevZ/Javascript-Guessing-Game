@@ -15,6 +15,7 @@ function reset() {
     GuessesLeft = 10;
     guesses = [];
     compLetters;
+    losses + 1;
     // document.getElementById("guesses-so-far").textContent;
 }; 
 
@@ -45,16 +46,12 @@ document.onkeyup = function (event) {
         }
 
         //Once the # of guesses reaches 0, restart the game
-        else if (GuessesLeft === 0) {
+        if (GuessesLeft === 0) {
             losses++;
-            guesses.push(losses);
             document.getElementById("losses2").textContent = losses;
             reset();
         }
 
     }
 
-    
-    //    var title = document.getElementById("play").textContent;
-    // var computerGuess = document.getElementById("computer").textContent;
 };
